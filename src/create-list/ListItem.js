@@ -5,12 +5,12 @@ import Typography from '@material-ui/core/Typography';
 
 import ListItemFooter from './ListItemFooter';
 
-const ListItem = ({item}) => ( 
+const ListItem = ({item, deleteProduct}) => ( 
 	<CustomCard
 		link="#"
 		image="https://www.imprensafalsa.com/wp-content/uploads/2017/11/Mitos-e-verdades-sobre-o-cafe%CC%81.png"
 		containerClass="list-item"
-		footer={<ListItemFooter total={item.total} />}
+		footer={<ListItemFooter item={item} deleteProduct={deleteProduct} />}
 	>
 		<div>
 			<div className="list-item-header">

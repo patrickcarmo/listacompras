@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import { InputAdornment } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 
-const units = ['kg', 'lt', 'un'];
+const units = ['Kilos', 'Litros', 'Unidades'];
 
 class Form extends Component {
 
@@ -28,7 +28,6 @@ class Form extends Component {
 		} else {
 			this.props.addProduct({ product, quantity, unit, price }, list);
 			this.setState({
-				list: '',
 				product: '',
 				quantity: '',
 				unit: '',
@@ -56,7 +55,7 @@ class Form extends Component {
 					<TextField
 						label="Produto"
 						name="product"
-						value={this.state.list.product}
+						value={this.state.product}
 						onChange={this.handleChange}
 						required
 						error={!this.state.product && this.state.showErrors}

@@ -32,7 +32,8 @@
 
 .list-item {
 	max-width: 220px;
-	min-width: 220px;;
+	min-width: 220px;
+	margin-right: 20px;
 }
 
 .list-card-footer {

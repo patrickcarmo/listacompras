@@ -5,25 +5,25 @@ import Typography from '@material-ui/core/Typography';
 
 import ListItemFooter from './ListItemFooter';
 
-const ListItem = () => ( 
+const ListItem = ({item}) => ( 
 	<CustomCard
 		link="#"
 		image="https://www.imprensafalsa.com/wp-content/uploads/2017/11/Mitos-e-verdades-sobre-o-cafe%CC%81.png"
 		containerClass="list-item"
-		footer={<ListItemFooter />}
+		footer={<ListItemFooter total={item.total} />}
 	>
 		<div>
 			<div className="list-item-header">
 				<Typography variant="subtitle1" component="h2">
-					Café
+					{item.product}
 				</Typography>
 				<Checkbox />
 			</div>
 			<Typography component="p">
-				1 Unidade
+				{item.quantity} {item.unit}
 			</Typography>
 			<Typography component="p">
-				R$ 10.00
+				R$ {item.price}
 			</Typography>
 			
 		</div>

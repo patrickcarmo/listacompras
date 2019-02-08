@@ -6,7 +6,7 @@ import Form from './Form.js';
 import ListItem from './ListItem';
 import './List.css';
 import { Creators as ListActions } from '../store/actions/list';
-
+import NewItem from './NewItem'
 class CreateList extends Component { 
 
 	addProduct = (product, list) => {
@@ -30,6 +30,10 @@ class CreateList extends Component {
 							deleteProduct={this.props.deleteProduct}
 							toggleProduct={this.props.toggleProduct}
 						/>)
+					}
+
+					{this.props.match.params.action === 'edicao' &&
+						<NewItem list={this.props.list.list} />
 					}
 				</div>
 			</div>

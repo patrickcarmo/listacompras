@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 
 import ListItemFooter from './ListItemFooter';
 
-const ListItem = ({item, deleteProduct}) => ( 
+const ListItem = ({item, deleteProduct, toggleProduct}) => ( 
 	<CustomCard
 		link="#"
 		image="https://www.imprensafalsa.com/wp-content/uploads/2017/11/Mitos-e-verdades-sobre-o-cafe%CC%81.png"
@@ -17,7 +17,7 @@ const ListItem = ({item, deleteProduct}) => (
 				<Typography variant="subtitle1" component="h2">
 					{item.product}
 				</Typography>
-				<Checkbox />
+				<Checkbox checked={item.checked} onClick={() => toggleProduct(item.id)}/>
 			</div>
 			<Typography component="p">
 				{item.quantity} {item.unit}

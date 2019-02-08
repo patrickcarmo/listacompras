@@ -11,13 +11,14 @@ const ListItem = ({item, deleteProduct, toggleProduct}) => (
 		image="https://www.imprensafalsa.com/wp-content/uploads/2017/11/Mitos-e-verdades-sobre-o-cafe%CC%81.png"
 		containerClass="list-item"
 		footer={<ListItemFooter item={item} deleteProduct={deleteProduct} />}
+		action={ () => toggleProduct(item.id) }
 	>
 		<div>
 			<div className="list-item-header">
 				<Typography variant="subtitle1" component="h2">
 					{item.product}
 				</Typography>
-				<Checkbox checked={item.checked} onClick={() => toggleProduct(item.id)}/>
+				<Checkbox checked={item.checked} />
 			</div>
 			<Typography component="p">
 				{item.quantity} {item.unit}

@@ -1,14 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import './Home.css';
 import NewList from './NewList';
 import List from './List';
 import { getListTotal, getOpenedItems, getClosedItems } from '../store/reducers/list';
+import { Creators as ListActions } from '../store/actions/list'
+
 
 const Home = (props) => (
 	<div className="page-container">
-		<NewList />
+		<NewList newList={props.newList} />
 		{props.list.items.length > 0 &&
 			<List
 				list={props.list.list}
@@ -27,4 +30,6 @@ const mapStateToProps = state => ({
 	closedItems: getClosedItems(state)
 });
 
-export default connect(mapStateToProps, null)(Home);
+const mapDispatchToProps = dispatch => bindActionCreators(ListActions, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

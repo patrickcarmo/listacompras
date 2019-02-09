@@ -11,7 +11,7 @@ const ListItem = ({item, deleteProduct, toggleProduct, list}) => (
 		image={item.img}
 		containerClass="list-item"
 		footer={<ListItemFooter list={list} item={item} deleteProduct={deleteProduct} />}
-		action={ () => toggleProduct(item.id) }
+		action={() => toggleProduct(item.id)}
 	>
 		<div>
 			<div className="list-item-header">

@@ -8,7 +8,7 @@ import ListItemFooter from './ListItemFooter';
 const ListItem = ({item, deleteProduct, toggleProduct, list}) => ( 
 	<CustomCard
 		link="#"
-		image="https://www.imprensafalsa.com/wp-content/uploads/2017/11/Mitos-e-verdades-sobre-o-cafe%CC%81.png"
+		image={item.img}
 		containerClass="list-item"
 		footer={<ListItemFooter list={list} item={item} deleteProduct={deleteProduct} />}
 		action={ () => toggleProduct(item.id) }

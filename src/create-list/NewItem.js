@@ -10,7 +10,7 @@ import CustomCard from '../common/CustomCard';
 const NewItem = (props) => (
 	<CustomCard link="#" action={() => props.startAdd(props.list)} containerClass="list-item">
 		<div className="new-item">
-			<p className="title">Novo Produto</p>
+			<p className="title">Add New Product</p>
 			<FontAwesomeIcon icon={faPlusCircle} color="#E4E4E4" size="8x" />
 		</div>
 	</CustomCard>

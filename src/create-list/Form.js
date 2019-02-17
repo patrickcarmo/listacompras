@@ -86,18 +86,18 @@ class Form extends Component {
 			<form noValidate autoComplete="off" className="form-container">
 				<div className="form-row">
 					<TextField
-						label="Lista"
+						label="List Name"
 						name="list"
 						value={this.state.list}
 						onChange={this.handleChange}
 						required
 						error={!this.state.list && this.state.showErrors}
 					/>
-					<Button variant="outlined" color='primary' onClick={this.handleSubmit}>Salvar</Button>
+					<Button variant="outlined" color='primary' onClick={this.handleSubmit}>Save</Button>
 				</div>
 				<div className="form-row">
 					<TextField
-						label="Produto"
+						label="Product"
 						name="product"
 						value={this.state.product}
 						onChange={this.handleChange}
@@ -106,7 +106,7 @@ class Form extends Component {
 					/>
 				
 					<TextField
-						label="Quantidade"
+						label="Quantity"
 						name="quantity"
 						value={this.state.quantity}
 						onChange={this.handleChange}
@@ -115,7 +115,7 @@ class Form extends Component {
 					/>
 					<TextField
 						select
-						label="Unidade"
+						label="Unit"
 						name="unit"
 						value={this.state.unit}
 						onChange={this.handleChange}
@@ -129,12 +129,12 @@ class Form extends Component {
 						}
 					</TextField>
 					<TextField
-						label="Preço"
+						label="Price"
 						name="price"
 						value={this.state.price}
 						onChange={this.handleChange}
 						InputProps={{
-							startAdornment: <InputAdornment position="start">R$</InputAdornment>
+							startAdornment: <InputAdornment position="start">$</InputAdornment>
 						}}
 					/>
 				</div>

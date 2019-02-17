@@ -24,7 +24,7 @@ const ListItem = ({item, deleteProduct, toggleProduct, list}) => (
 				{item.quantity} {item.unit}
 			</Typography>
 			<Typography component="p">
-				R$ {item.price}
+				$ {item.price}
 			</Typography>
 			
 		</div>

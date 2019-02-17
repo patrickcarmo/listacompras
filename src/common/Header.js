@@ -6,7 +6,7 @@ const Header = (props) => (
 	<AppBar position="static" color="primary">
 		<div className="header">
 			<Link to="/">
-				<p className="title text-esquerda">Lista de Compras</p>
+				<p className="title text-esquerda">Shopping List</p>
 			</Link>
 		</div>
 	</AppBar>

@@ -22,7 +22,7 @@ const ListItemFooter = (props) => (
 				size="1x"
 			/>
 		</div>
-		<p>Total: R$ {props.item.total}</p>
+		<p>Total: $ {props.item.total}</p>
 	</div>
 )
 

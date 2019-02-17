@@ -9,7 +9,7 @@ const NewList = (props) => (
 		action={props.newList}
 	>
 		<div >
-			<p className="title">Adicionar Novas Listas!</p>
+			<p className="title">Add New List!</p>
 		</div>
 	</CustomCard>
 );
